@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 host="http://4clicks.ru"
 page="/ajax.php?page="
