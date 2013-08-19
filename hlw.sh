@@ -11,3 +11,10 @@ pagepics() {
     | sed 's:thumbs:original:' \
     | awk -v host=$host '{ print host $1 }'
 }
+
+picdate() {
+    echo $1 \
+    | cut -d'/' -f 7 \
+    | awk -F"-" '{print "\"20"$1"/"$2"/"$3" "$4":"$5":"$6"\""}' \
+    | xargs date +%s -d
+}
